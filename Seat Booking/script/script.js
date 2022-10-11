@@ -9,15 +9,15 @@ let ticketprice = Number(movieEl.value);
 let seatcount = 0;
 let totalprice = 0;
 
-// const populateUI = function()
-// {
-//     countEl.innerText = seatcount;
-//     totalEl.innerText = seatcount * ticketprice;
-// }
+const populateUI = function()
+{
+    countEl.innerText = seatcount;
+    totalEl.innerText = seatcount * ticketprice;
+}
 movieEl.addEventListener('change', function()
 {
     ticketprice = Number(movieEl.value);
-    // populateUI()
+    populateUI()
 });
 
 screencontainer.addEventListener('click', function(e)
@@ -29,9 +29,7 @@ if(!e.target .classList.contains('occupied'))
         e.target .classList .toggle('selected');
         const selectedseatEl = document.querySelectorAll('.row .seat .selected');
         seatcount = selectedseatEl;
-     
-        // console.log(seatcount.length);
-        // populateUI()
+        populateUI()
     }
     }
 })
