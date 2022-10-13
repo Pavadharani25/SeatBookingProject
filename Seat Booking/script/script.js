@@ -27,7 +27,7 @@ if(e.target .classList .contains('seat'))
 if(!e.target .classList.contains('occupied'))
     {
         e.target .classList .toggle('selected');
-        const selectedseatEl = document.querySelectorAll('.row .seat .selected');
+        const selectedseatEl = document.querySelectorAll('.row .seat.selected');
         seatcount = selectedseatEl;
         populateUI()
     }
